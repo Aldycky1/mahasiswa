@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Halaman Divisi</h1>
+            <h1>Halaman Mata Kuliah</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -19,11 +19,11 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="<?= base_url; ?>/divisi/simpandivisi" method="POST" enctype="multipart/form-data">
+        <form role="form" action="<?= base_url; ?>/mataKuliah/simpanMataKuliah" method="POST" enctype="multipart/form-data">
           <div class="card-body">
             <div class="form-group">
-              <label>Nama Divisi</label>
-              <input type="text" class="form-control" placeholder="masukkan divisi..." name="nama_divisi">
+              <label>Nama Matkul</label>
+              <input type="text" class="form-control" placeholder="masukkan nama matkul..." name="nama_matkul">
             </div>
           </div>
           <!-- /.card-body -->

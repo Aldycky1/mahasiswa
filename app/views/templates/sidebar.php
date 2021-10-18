@@ -29,42 +29,34 @@
           </li>
           <li class="nav-header">Data</li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/kategori" class="nav-link">
+            <a href="<?= base_url; ?>/mahasiswa" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
-                Kategori
+                Mahasiswa
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/buku" class="nav-link">
+            <a href="<?= base_url; ?>/dosen" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Buku
+                Dosen
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/user" class="nav-link">
+            <a href="<?= base_url; ?>/mataKuliah" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                User
+                Mata Kuliah
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/divisi" class="nav-link">
+            <a href="<?= base_url; ?>/nilaiMatkul" class="nav-link">
               <i class="nav-icon fas fa-building"></i>
               <p>
-                Divisi
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= base_url; ?>/pegawai" class="nav-link">
-              <i class="nav-icon fas fa-user-tie"></i>
-              <p>
-                Pegawai
+                Nilai
               </p>
             </a>
           </li>

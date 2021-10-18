@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Halaman Divisi</h1>
+            <h1>Halaman Nilai</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -19,13 +19,12 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="<?= base_url; ?>/divisi/updateDivisi" method="POST" enctype="multipart/form-data">
-
-          <input type="hidden" name="id" value="<?= $data['divisi']['id']; ?>">
+        <form role="form" action="<?= base_url; ?>/nilaiMatkul/updateNilaiMatkul" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?= $data['nilai_matkul']['id']; ?>">
           <div class="card-body">
             <div class="form-group">
-              <label>Nama Divisi</label>
-              <input type="text" class="form-control" placeholder="masukkan divisi..." name="nama_divisi" value="<?= $data['divisi']['nama_divisi']; ?>">
+              <label>Nilai</label>
+              <input type="number" class="form-control" placeholder="masukkan nilai..." name="nilai" value="<?= $data['nilai_matkul']['nilai']; ?>">
             </div>
           </div>
           <!-- /.card-body -->

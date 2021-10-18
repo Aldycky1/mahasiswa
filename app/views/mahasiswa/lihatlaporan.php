@@ -77,23 +77,27 @@
       <thead>
         <tr>
           <th style="width: 10px">#</th>
-          <th>NIP</th>
-          <th>Nama</th>
-          <th>Alamat</th>
-          <th>Tanggal Lahir</th>
-          <th>No. HP</th>
+          <th>Judul</th>
+          <th>Penerbit</th>
+          <th>Pengarang</th>
+          <th>Tahun</th>
+          <th>Kategori</th>
+          <th>Harga</th>
         </tr>
       </thead>
       <tbody>
         <?php $no = 1; ?>
-        <?php foreach ($data['pegawai'] as $row) : ?>
+        <?php foreach ($data['buku'] as $row) : ?>
           <tr>
             <td><?= $no; ?></td>
-            <td><?= $row['nip']; ?></td>
-            <td><?= $row['nama']; ?></td>
-            <td><?= $row['alamat']; ?></td>
-            <td><?= $row['tanggal_lahir']; ?></td>
-            <td><?= $row['no_hp']; ?></td>
+            <td><?= $row['judul']; ?></td>
+            <td><?= $row['penerbit']; ?></td>
+            <td><?= $row['pengarang']; ?></td>
+            <td><?= $row['tahun']; ?></td>
+            <td>
+              <div class="badge badge-warning"><?= $row['nama_kategori']; ?></div>
+            </td>
+            <td><?= $row['harga']; ?></td>
           </tr>
         <?php $no++;
         endforeach; ?>

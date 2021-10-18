@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Halaman Buku</h1>
+            <h1>Halaman Mahasiswa</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -25,18 +25,18 @@
       <div class="card">
         <div class="card-header">
           <h3 class="card-title"><?= $data['title'] ?></h3>
-          <div class="btn-group float-right"><a href="<?= base_url; ?>/buku/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Buku</a><a href="<?= base_url; ?>/buku/laporan" class="btn float-right btn-xs btn btn-info">Laporan Buku</a><a href="<?= base_url; ?>/buku/lihatlaporan" class="btn float-right btn-xs btn btn-warning">Lihat Laporan Buku</a></div>
+          <div class="btn-group float-right"><a href="<?= base_url; ?>/mahasiswa/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Mahasiswa</a><a href="<?= base_url; ?>/mahasiswa/laporan" class="btn float-right btn-xs btn btn-info">Laporan Mahasiswa</a><a href="<?= base_url; ?>/mahasiswa/lihatlaporan" class="btn float-right btn-xs btn btn-warning">Lihat Laporan Mahasiswa</a></div>
         </div>
         <div class="card-body">
 
-          <form action="<?= base_url; ?>/buku/cari" method="post">
+          <form action="<?= base_url; ?>/mahasiswa/cari" method="post">
             <div class="row mb-3">
               <div class="col-lg-6">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="" name="key">
                   <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">Cari Data</button>
-                    <a class="btn btn-outline-danger" href="<?= base_url; ?>/buku">Reset</a>
+                    <a class="btn btn-outline-danger" href="<?= base_url; ?>/mahasiswa">Reset</a>
                   </div>
                 </div>
 
@@ -47,30 +47,32 @@
             <thead>
               <tr>
                 <th style="width: 10px">#</th>
-                <th>Judul</th>
-                <th>Penerbit</th>
-                <th>Pengarang</th>
-                <th>Tahun</th>
-                <th>Kategori</th>
-                <th>Harga</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Dosen Pengajar</th>
+                <th>Mata Kuliah</th>
+                <th>Nilai</th>
                 <th style="width: 150px">Action</th>
               </tr>
             </thead>
             <tbody>
               <?php $no = 1; ?>
-              <?php foreach ($data['buku'] as $row) : ?>
+              <?php foreach ($data['mahasiswa'] as $row) : ?>
                 <tr>
                   <td><?= $no; ?></td>
-                  <td><?= $row['judul']; ?></td>
-                  <td><?= $row['penerbit']; ?></td>
-                  <td><?= $row['pengarang']; ?></td>
-                  <td><?= $row['tahun']; ?></td>
+                  <td><?= $row['nama_mahasiswa']; ?></td>
+                  <td><?= $row['nim']; ?></td>
                   <td>
-                    <div class="badge badge-warning"><?= $row['nama_kategori']; ?></div>
+                    <div class="badge badge-warning"><?= $row['nama_dosen']; ?></div>
                   </td>
-                  <td><?= $row['harga']; ?></td>
                   <td>
-                    <a href="<?= base_url; ?>/buku/edit/<?= $row['id'] ?>" class="badge badge-info">Edit</a> <a href="<?= base_url; ?>/buku/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
+                    <div class="badge badge-warning"><?= $row['nama_matkul']; ?></div>
+                  </td>
+                  <td>
+                    <div class="badge badge-warning"><?= $row['nilai']; ?></div>
+                  </td>
+                  <td>
+                    <a href="<?= base_url; ?>/mahasiswa/edit/<?= $row['id'] ?>" class="badge badge-info">Edit</a> <a href="<?= base_url; ?>/mahasiswa/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
                   </td>
                 </tr>
               <?php $no++;

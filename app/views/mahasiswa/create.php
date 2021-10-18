@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Halaman Buku</h1>
+            <h1>Halaman Mahasiswa</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -19,36 +19,37 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="<?= base_url; ?>/buku/simpanbuku" method="POST" enctype="multipart/form-data">
+        <form role="form" action="<?= base_url; ?>/mahasiswa/simpanMahasiswa" method="POST" enctype="multipart/form-data">
           <div class="card-body">
             <div class="form-group">
-              <label>Judul</label>
-              <input type="text" class="form-control" placeholder="masukkan judul buku..." name="judul">
+              <label>Nama Mahasiswa</label>
+              <input type="text" class="form-control" placeholder="masukkan nama mahasiswa..." name="nama_mahasiswa">
             </div>
             <div class="form-group">
-              <label>Penerbit</label>
-              <input type="text" class="form-control" placeholder="masukkan penerbit buku..." name="penerbit">
+              <label>NIM</label>
+              <input type="number" class="form-control" placeholder="masukkan nim mahasiswa..." name="nim">
             </div>
             <div class="form-group">
-              <label>Pengarang</label>
-              <input type="text" class="form-control" placeholder="masukkan pengarang buku..." name="pengarang">
-            </div>
-            <div class="form-group">
-              <label>Tahun</label>
-              <input type="text" class="form-control" placeholder="masukkan tahun buku..." name="tahun">
-            </div>
-            <div class="form-group">
-              <label>Kategori</label>
-              <select class="form-control" name="kategori_id">
+              <label>Pilih Dosen</label>
+              <select class="form-control" name="id_dosen">
                 <option value="">Pilih</option>
-                <?php foreach ($data['kategori'] as $row) : ?>
-                  <option value="<?= $row['id']; ?>"><?= $row['nama_kategori']; ?></option>
+                <?php foreach ($data['dosen'] as $row) : ?>
+                  <option value="<?= $row['id']; ?>"><?= $row['nama_dosen']; ?></option>
                 <?php endforeach; ?>
               </select>
             </div>
             <div class="form-group">
-              <label>Harga</label>
-              <input type="text" class="form-control" placeholder="masukkan harga buku..." name="harga">
+              <label>Pilih Matkul</label>
+              <select class="form-control" name="id_matkul">
+                <option value="">Pilih</option>
+                <?php foreach ($data['mata_kuliah'] as $row) : ?>
+                  <option value="<?= $row['id']; ?>"><?= $row['nama_matkul']; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Nilai</label>
+              <input type="number" class="form-control" placeholder="masukkan nilai mahasiswa..." name="nilai">
             </div>
           </div>
           <!-- /.card-body -->
