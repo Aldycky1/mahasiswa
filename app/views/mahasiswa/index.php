@@ -68,9 +68,7 @@
                   <td>
                     <div class="badge badge-warning"><?= $row['nama_matkul']; ?></div>
                   </td>
-                  <td>
-                    <div class="badge badge-warning"><?= $row['nilai']; ?></div>
-                  </td>
+                  <td><?= $row['nilai']; ?></td>
                   <td>
                     <a href="<?= base_url; ?>/mahasiswa/edit/<?= $row['id'] ?>" class="badge badge-info">Edit</a> <a href="<?= base_url; ?>/mahasiswa/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
                   </td>

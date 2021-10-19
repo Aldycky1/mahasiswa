@@ -24,7 +24,8 @@
 
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><?= $data['title'] ?></h3> <a href="<?= base_url; ?>/dosen/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Dosen</a>
+          <h3 class="card-title"><?= $data['title'] ?></h3>
+          <div class="btn-group float-right"><a href="<?= base_url; ?>/dosen/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Dosen</a><a href="<?= base_url; ?>/dosen/laporan" class="btn float-right btn-xs btn btn-info">Laporan Dosen</a><a href="<?= base_url; ?>/dosen/lihatlaporan" class="btn float-right btn-xs btn btn-warning">Lihat Laporan Dosen</a></div>
         </div>
         <div class="card-body">
 

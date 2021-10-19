@@ -78,26 +78,16 @@
         <tr>
           <th style="width: 10px">#</th>
           <th>Nama</th>
-          <th>NIM</th>
-          <th>Nama Dosen</th>
-          <th>Matkul</th>
-          <th>Nilai</th>
+          <th>NIP</th>
         </tr>
       </thead>
       <tbody>
         <?php $no = 1; ?>
-        <?php foreach ($data['mahasiswa'] as $row) : ?>
+        <?php foreach ($data['dosen'] as $row) : ?>
           <tr>
             <td><?= $no; ?></td>
-            <td><?= $row['nama_mahasiswa']; ?></td>
-            <td><?= $row['nim']; ?></td>
-            <td>
-              <div class="badge badge-warning"><?= $row['nama_dosen']; ?></div>
-            </td>
-            <td>
-              <div class="badge badge-warning"><?= $row['nama_matkul']; ?></div>
-            </td>
-            <td><?= $row['nilai']; ?></td>
+            <td><?= $row['nama_dosen']; ?></td>
+            <td><?= $row['nip']; ?></td>
           </tr>
         <?php $no++;
         endforeach; ?>

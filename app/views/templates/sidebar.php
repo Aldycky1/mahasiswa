@@ -2,7 +2,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <span class="brand-text font-weight-light">Buku Kita</span>
+      <span class="brand-text font-weight-light">Mahasiswa Kita</span>
     </a>
 
     <!-- Sidebar -->
@@ -30,7 +30,7 @@
           <li class="nav-header">Data</li>
           <li class="nav-item">
             <a href="<?= base_url; ?>/mahasiswa" class="nav-link">
-              <i class="nav-icon fas fa-bars"></i>
+              <i class="nav-icon fas fa-user-graduate"></i>
               <p>
                 Mahasiswa
               </p>
@@ -38,7 +38,7 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url; ?>/dosen" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Dosen
               </p>
@@ -46,17 +46,9 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url; ?>/mataKuliah" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Mata Kuliah
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= base_url; ?>/nilaiMatkul" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
-              <p>
-                Nilai
               </p>
             </a>
           </li>

@@ -19,6 +19,44 @@ class Dosen extends Controller
 		$this->view('dosen/index', $data);
 		$this->view('templates/footer');
 	}
+
+	public function lihatlaporan()
+	{
+		$data['title'] = 'Data Laporan Dosen';
+		$data['dosen'] = $this->model('DosenModel')->getAllDosen();
+		$this->view('dosen/lihatlaporan', $data);
+	}
+
+	public function laporan()
+	{
+		$data['dosen'] = $this->model('DosenModel')->getAllDosen();
+
+		$pdf = new FPDF('p', 'mm', 'A4');
+		// membuat halaman baru
+		$pdf->AddPage();
+		// setting jenis font yang akan digunakan
+		$pdf->SetFont('Arial', 'B', 14);
+		// mencetak string 
+		$pdf->Cell(190, 7, 'LAPORAN DOSEN', 0, 1, 'C');
+
+		// Memberikan space kebawah agar tidak terlalu rapat
+		$pdf->Cell(10, 7, '', 0, 1);
+
+		$pdf->SetFont('Arial', 'B', 10);
+		$pdf->Cell(120, 6, 'NAMA DOSEN', 1);
+		$pdf->Cell(70, 6, 'NIP', 1);
+		$pdf->Ln();
+		$pdf->SetFont('Arial', '', 10);
+
+		foreach ($data['dosen'] as $row) {
+			$pdf->Cell(120, 6, $row['nama_dosen'], 1);
+			$pdf->Cell(70, 6, $row['nip'], 1);
+			$pdf->Ln();
+		}
+
+		$pdf->Output('D', 'Laporan Dosen.pdf', true);
+	}
+
 	public function cari()
 	{
 		$data['title'] = 'Data Dosen';

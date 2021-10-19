@@ -20,7 +20,7 @@
           <h3 class="card-title">Hello</h3>
         </div>
         <div class="card-body">
-          Selamat datang dihalaman buku kita!
+          Selamat datang dihalaman mahasiswa kita!
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

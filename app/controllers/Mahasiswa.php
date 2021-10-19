@@ -28,41 +28,41 @@ class Mahasiswa extends Controller
 		$this->view('mahasiswa/lihatlaporan', $data);
 	}
 
-	// public function laporan()
-	// {
-	// 	$data['mahasiswa'] = $this->model('MahasiswaModel')->getAllMahasiswa();
+	public function laporan()
+	{
+		$data['mahasiswa'] = $this->model('MahasiswaModel')->getAllMahasiswa();
 
-	// 	$pdf = new FPDF('p', 'mm', 'A4');
-	// 	// membuat halaman baru
-	// 	$pdf->AddPage();
-	// 	// setting jenis font yang akan digunakan
-	// 	$pdf->SetFont('Arial', 'B', 14);
-	// 	// mencetak string 
-	// 	$pdf->Cell(190, 7, 'LAPORAN MAHASISWA', 0, 1, 'C');
+		$pdf = new FPDF('p', 'mm', 'A4');
+		// membuat halaman baru
+		$pdf->AddPage();
+		// setting jenis font yang akan digunakan
+		$pdf->SetFont('Arial', 'B', 14);
+		// mencetak string 
+		$pdf->Cell(190, 7, 'LAPORAN MAHASISWA', 0, 1, 'C');
 
-	// 	// Memberikan space kebawah agar tidak terlalu rapat
-	// 	$pdf->Cell(10, 7, '', 0, 1);
+		// Memberikan space kebawah agar tidak terlalu rapat
+		$pdf->Cell(10, 7, '', 0, 1);
 
-	// 	$pdf->SetFont('Arial', 'B', 10);
-	// 	$pdf->Cell(85, 6, 'JUDUL', 1);
-	// 	$pdf->Cell(30, 6, 'PENERBIT', 1);
-	// 	$pdf->Cell(30, 6, 'PENGARANG', 1);
-	// 	$pdf->Cell(15, 6, 'TAHUN', 1);
-	// 	$pdf->Cell(25, 6, 'KATEGORI', 1);
-	// 	$pdf->Ln();
-	// 	$pdf->SetFont('Arial', '', 10);
+		$pdf->SetFont('Arial', 'B', 10);
+		$pdf->Cell(55, 6, 'NAMA', 1);
+		$pdf->Cell(35, 6, 'NIM', 1);
+		$pdf->Cell(40, 6, 'NAMA DOSEN', 1);
+		$pdf->Cell(35, 6, 'MATKUL', 1);
+		$pdf->Cell(25, 6, 'NILAI', 1);
+		$pdf->Ln();
+		$pdf->SetFont('Arial', '', 10);
 
-	// 	foreach ($data['mahasiswa'] as $row) {
-	// 		$pdf->Cell(85, 6, $row['judul'], 1);
-	// 		$pdf->Cell(30, 6, $row['penerbit'], 1);
-	// 		$pdf->Cell(30, 6, $row['pengarang'], 1);
-	// 		$pdf->Cell(15, 6, $row['tahun'], 1);
-	// 		$pdf->Cell(25, 6, $row['nama_kategori'], 1);
-	// 		$pdf->Ln();
-	// 	}
+		foreach ($data['mahasiswa'] as $row) {
+			$pdf->Cell(55, 6, $row['nama_mahasiswa'], 1);
+			$pdf->Cell(35, 6, $row['nim'], 1);
+			$pdf->Cell(40, 6, $row['nama_dosen'], 1);
+			$pdf->Cell(35, 6, $row['nama_matkul'], 1);
+			$pdf->Cell(25, 6, $row['nilai'], 1);
+			$pdf->Ln();
+		}
 
-	// 	$pdf->Output('D', 'Laporan Mahasiswa.pdf', true);
-	// }
+		$pdf->Output('D', 'Laporan Mahasiswa.pdf', true);
+	}
 	public function cari()
 	{
 		$data['title'] = 'Data Mahasiswa';
