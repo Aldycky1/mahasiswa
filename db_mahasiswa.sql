@@ -33,7 +33,7 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `mahasiswa` (`id`, `nama_mahasiswa`, `nim`, `id_dosen`, `id_matkul`, `nilai`) VALUES
-(8,	'Aldycky Bagus',	1907411012,	6,	2,	83);
+(8,	'Aldycky Bagus',	1907411012,	6,	2,	87);
 
 DROP TABLE IF EXISTS `mata_kuliah`;
 CREATE TABLE `mata_kuliah` (
@@ -45,17 +45,6 @@ CREATE TABLE `mata_kuliah` (
 INSERT INTO `mata_kuliah` (`id`, `nama_matkul`) VALUES
 (2,	'P Web 2'),
 (3,	'Probstat');
-
-DROP TABLE IF EXISTS `nilai_matkul`;
-CREATE TABLE `nilai_matkul` (
-  `id` int(12) NOT NULL AUTO_INCREMENT,
-  `nilai` int(3) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO `nilai_matkul` (`id`, `nilai`) VALUES
-(3,	87),
-(4,	99);
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -69,4 +58,4 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `nama`, `username`, `password`) VALUES
 (1,	'Herzi',	'admin',	'21232f297a57a5a743894a0e4a801fc3');
 
--- 2021-10-18 18:09:57
+-- 2021-10-19 02:41:43
